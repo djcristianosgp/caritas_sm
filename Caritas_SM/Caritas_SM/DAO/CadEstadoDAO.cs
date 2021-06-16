@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
 using Caritas_SM.Controllers;
+using Caritas_SM.Models;
 
 namespace Caritas_SM.DAO
 {
@@ -20,9 +21,9 @@ namespace Caritas_SM.DAO
         //    _config = configuration;
         //}
 
-        public List<CadEstadoDAO> GetAllEstados()
+        public List<CadEstado> GetAllEstados()
         {
-            string sScript = "select count(*) from estacoes where estacoes;";
+            string sScript = "select * from cadestados order by descricao;";
             string sResultado = "";
             try
             {
@@ -30,15 +31,13 @@ namespace Caritas_SM.DAO
                 conn.Open();
                 {
                     {
-                        //var lista1 = conn.CommandTimeout<CadEstadoDAO>(sScript).UnknownResultTypeList();
                         NpgsqlCommand command = new NpgsqlCommand(sScript, conn);
-                        //var lista = command.ExecuteNonQuery<CadEstadoDAO>(sScript)
 
                         //NpgsqlDataReader dr = command.ExecuteReader();
                         var lista = command.ExecuteReader();
                         conn.Close();
 
-                        return lista;
+                        return GetAllEstados();
                     }
                 }
             }

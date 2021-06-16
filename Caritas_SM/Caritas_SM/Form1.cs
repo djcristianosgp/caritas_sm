@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Caritas_SM.Controllers;
+using Caritas_SM.DAO;
+using Caritas_SM.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,13 @@ namespace Caritas_SM
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            clsBanco.StringConexao();
+            var sMensagem = CadEstadoDAO.GetAllEstados().ToList();
+            MessageBox.Show(sMensagem.ToString());
         }
     }
 }

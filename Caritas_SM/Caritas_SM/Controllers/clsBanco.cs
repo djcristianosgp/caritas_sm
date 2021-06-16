@@ -15,11 +15,11 @@ namespace Caritas_SM.Controllers
         {
             NpgsqlConnectionStringBuilder strConnection = new NpgsqlConnectionStringBuilder();
 
-            strConnection.Host = "";
-            strConnection.Database = "";
-            strConnection.Port = 0;
-            strConnection.Username = "";
-            strConnection.Password = "pg@rgDev";
+            strConnection.Host = "otto.db.elephantsql.com";
+            strConnection.Database = "rhvlvipc";
+            strConnection.Port = 5432;
+            strConnection.Username = "rhvlvipc";
+            strConnection.Password = "0hOdNFJ9ymoTLk_i7MxVGla6oy3LCd3u";
             //strConnection.Pooling = false;
             //strConnection.Encoding = "windows-1252";
             //strConnection.ClientEncoding = "UTF8";
