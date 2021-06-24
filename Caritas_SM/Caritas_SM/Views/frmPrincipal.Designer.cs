@@ -28,12 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.muArquivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.muCadastros = new System.Windows.Forms.ToolStripMenuItem();
+            this.miCadPessoas = new System.Windows.Forms.ToolStripMenuItem();
+            this.miCadCidade = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.muArquivo,
+            this.muCadastros});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // muArquivo
+            // 
+            this.muArquivo.Name = "muArquivo";
+            this.muArquivo.Size = new System.Drawing.Size(61, 20);
+            this.muArquivo.Text = "Arquivo";
+            // 
+            // muCadastros
+            // 
+            this.muCadastros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miCadPessoas,
+            this.miCadCidade});
+            this.muCadastros.Name = "muCadastros";
+            this.muCadastros.Size = new System.Drawing.Size(71, 20);
+            this.muCadastros.Text = "Cadastros";
+            // 
+            // miCadPessoas
+            // 
+            this.miCadPessoas.Name = "miCadPessoas";
+            this.miCadPessoas.Size = new System.Drawing.Size(180, 22);
+            this.miCadPessoas.Text = "Pessoas";
+            this.miCadPessoas.Click += new System.EventHandler(this.miCadPessoas_Click);
+            // 
+            // miCadCidade
+            // 
+            this.miCadCidade.Name = "miCadCidade";
+            this.miCadCidade.Size = new System.Drawing.Size(180, 22);
+            this.miCadCidade.Text = "Cidades";
+            this.miCadCidade.Click += new System.EventHandler(this.miCadCidade_Click);
+            // 
+            // frmPrincipal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmPrincipal";
+            this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
+            this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Caritas São Mateus";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem muArquivo;
+        private System.Windows.Forms.ToolStripMenuItem muCadastros;
+        private System.Windows.Forms.ToolStripMenuItem miCadPessoas;
+        private System.Windows.Forms.ToolStripMenuItem miCadCidade;
     }
 }

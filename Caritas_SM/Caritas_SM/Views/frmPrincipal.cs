@@ -16,5 +16,19 @@ namespace Caritas_SM.Views
         {
             InitializeComponent();
         }
+
+        private void miCadPessoas_Click(object sender, EventArgs e)
+        {
+            frmCadPessoa FormCadPessoas = new frmCadPessoa();
+            FormCadPessoas.MdiParent = this;
+            FormCadPessoas.Show();
+        }
+
+        private void miCadCidade_Click(object sender, EventArgs e)
+        {
+            frmCadCidade FormCadCidades = new frmCadCidade();
+            FormCadCidades.MdiParent = this;
+            FormCadCidades.Show();
+        }
     }
 }
